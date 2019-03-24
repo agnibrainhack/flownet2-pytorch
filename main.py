@@ -49,8 +49,7 @@ if __name__ == '__main__':
     parser.add_argument('--inference_batch_size', type=int, default=1)
     parser.add_argument('--inference_n_batches', type=int, default=-1)
     parser.add_argument('--save_flow', action='store_true', help='save predicted flows to file')
-    parser.add_argument('--inference_dataset_root', default='', type=str, metavar='PATH', help='path to dataset root (default: none)')
-    
+
 
     parser.add_argument('--resume', default='', type=str, metavar='PATH', help='path to latest checkpoint (default: none)')
     parser.add_argument('--log_frequency', '--summ_iter', type=int, default=1, help="Log every n batches")
