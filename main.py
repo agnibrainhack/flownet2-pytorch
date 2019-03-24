@@ -151,6 +151,7 @@ if __name__ == '__main__':
             validation_loader = DataLoader(validation_dataset, batch_size=args.effective_batch_size, shuffle=False, **gpuargs)
 
         if exists(args.inference_dataset_root):
+            print("We are here")
             inference_dataset = args.inference_dataset_class(args, False, **tools.kwargs_from_args(args, 'inference_dataset'))
             block.log('Inference Dataset: {}'.format(args.inference_dataset))
             block.log('Inference Input: {}'.format(' '.join([str([d for d in x.size()]) for x in inference_dataset[0][0]])))
